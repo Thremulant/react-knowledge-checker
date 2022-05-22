@@ -11,17 +11,17 @@ export default function App() {
   };
 
   return (
-    <div className="bg-zinc-900 h-screen w-75 pt-32">
-      <h1 className="w-[75%] mx-auto text-slate-600 text-4xl font-vol">
+    <div className="bg-zinc-900 h-100 w-[75%] mx-auto py-32 break-normal text-white">
+      <h1 className=" mx-auto text-slate-600 text-5xl  xl:text-6xl font-vol text-center mb-16 text-blue-500 ">
         What level of React are you in?
       </h1>
-      <div className="w-[75%] mx-auto font-wor font-light">
+      <div className="w-[100%] mx-auto font-wor font-light">
         <Formik
           initialValues={model}
           onSubmit={() => { return }}>
           <>
-            <ReactCheckList />
             <ReactLevel />
+            <ReactCheckList />
           </>
         </Formik>
       </div>
