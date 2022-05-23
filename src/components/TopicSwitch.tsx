@@ -18,23 +18,23 @@ export const TopicSwitch = ({ topicIndex, obj }: { topicIndex: number, obj: IOpt
   }, [values.topics])
 
   return (
-    <div className="flex flex-row grow-0 shrink-0">
+    <>
       <Switch
         checked={enabled}
         onChange={setEnabled}
-        className={`${enabled ? "bg-blue-600" : "bg-gray-200"
-          } relative inline-flex h-6 w-11 items-center rounded-full mr-2`}
+        className={`${enabled ? values.topics[topicIndex].score === 3 ? "bg-red-500" : values.topics[topicIndex].score === 2 ? 'bg-amber-500' : 'bg-green-500' : "bg-zinc-800"
+          } relative inline-flex h-6 w-11 items-center rounded-full mr-2 min-w-[44px] mt-[2px]`}
       >
         <span className="sr-only">Enable notifications</span>
         <span
           className={`${enabled ? "translate-x-6" : "translate-x-1"
-            } inline-block h-4 w-4 transform rounded-full bg-white`}
+            } inline-block h-4 w-4 transform rounded-full bg-zinc-100`}
         />
       </Switch>
-      <div className="flex flex-col">
-        <h4 className="text-xl text-zinc-100">{obj.name}</h4>
+      <div className="flex flex-col cursor-pointer" onClick={() => setEnabled(!enabled)}>
+        <h4 className="text-md md:text-xl text-zinc-100 font-bold">{obj.name}</h4>
         <p className="text-sm text-zinc-400">{obj.desc}</p>
       </div>
-    </div>
+    </>
   );
 };

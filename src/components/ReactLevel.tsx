@@ -53,25 +53,28 @@ export const ReactLevel = () => {
 
   return (
     <>
-      <div className="w-full mx-auto mb-16 sticky top-0 z-20 pt-16 bg-zinc-900">
-        <div className="h-12 rounded-full w-100 drop-shadow-xl overflow-clip shadow-inner shadow-xl bg-zinc-800 mb-4">
-          <motion.div style={{ width: width }} transition={{ duration: .2 }} className="h-12 rounded-full bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500"></motion.div>
-        </div>
-        <div className="w-100 top-8 flex flex-row justify-between mx-auto text-white pl-6 md:pl-32 h-16">
-          <Level current={total} text="Beginner" msg="Nice!!" points={BEGIN} />
-          <Level current={total} text="Intermediate" msg="Epic!" points={INTER} />
-          <Level current={total} text="Advanced" msg={`Congratulations! ${< br />}you're the king of the React nerds!`} points={ADVAN} />
-        </div>
-        <div className="w-100 top-8 flex flex-row justify-between mx-auto text-white pl-6 md:pl-32 py-6">
-          <div onClick={handleClear}>
-            Clear
+      <div className="sticky top-0 z-20 pt-16 -mx-8 xl:mx-0 ">
+        <div className="w-full mx-auto  bg-zinc-900 h-[200px] px-8 xl:px-0">
+          <div className="h-12 rounded-full w-100 drop-shadow-xl overflow-clip shadow-inner shadow-xl bg-zinc-800 mb-4 ">
+            <motion.div style={{ width: width }} transition={{ duration: .2 }} className="h-12 rounded-full bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500"></motion.div>
           </div>
-          <div onClick={handleSelectAll}>
-            All
+          <div className="w-100 top-8 flex flex-row justify-between mx-auto text-white pl-6 md:pl-32 h-16">
+            <Level current={total} text="Beginner" msg="Nice!!" points={BEGIN} />
+            <Level current={total} text="Intermediate" msg="Epic!" points={INTER} />
+            <Level current={total} text="Advanced" msg={`Congratulations!\nyou're the king of the React nerds!`} points={ADVAN} />
+          </div>
+          <div className="w-100 top-8 flex flex-row justify-center mx-auto text-white pl-6 md:pl-32 py-6">
+            <div onClick={handleClear} className='transition duration-300 ease-in-out cursor-pointer px-4 py-2 border-[1px] hover:border-0 border-solid border-zinc-200 hover:bg-gradient-to-br from-yellow-500 hover:font-bold to-orange-500 drop-shadow-xl rounded-lg'>
+              Clear
+            </div>
+            {/* <div onClick={handleSelectAll} className='transition-all ease-in-out cursor-pointer px-4 py-2 bg-gradient-to-br from-rose-500 to-orange-500 drop-shadow-xl rounded-lg hover:-top-[5px] relative mr-5'>
+              All
+            </div> */}
           </div>
         </div>
+        <div className="bg-gradient-to-b from-zinc-900 h-8"></div>
       </div>
-      <div className="bg-gradient-to-b from-zinc-900 z-20 sticky top-[240px] h-16"></div>
+      <div className="bg-zinc-900 h-16 abolute sticky z-10 top-0"></div>
     </>
   );
 };
@@ -90,9 +93,9 @@ const Level = ({ current, text, msg, points }: { current: number, text: string, 
   }, [current, points])
 
   return (
-    <div className="flex flex-col relative w-[200px] justify-start items-center min-h-[64px]" id={`reward-${text.toLowerCase()}`}>
-      <div className="relative text-xl">{text}</div>
-      {current >= points && <motion.p animate={{ opacity: [0, 1], y: [10, 0] }} transition={{ duration: .2 }} className='text-yellow-500  mx-auto text-md font-bold'>{msg}</motion.p>}
+    <div className="flex flex-col relative w-[250px] text-center justify-start items-center min-h-[64px]" id={`reward-${text.toLowerCase()}`}>
+      <div className="relative text-md md:text-xl">{text}</div>
+      {current >= points && <motion.p animate={{ opacity: [0, 1], y: [10, 0] }} transition={{ duration: .2 }} className='text-yellow-500  mx-auto text-sm md:text-md font-bold whitespace-pre'>{msg}</motion.p>}
     </div>
   )
 }
