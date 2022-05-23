@@ -1,3 +1,8 @@
+# React learning tracking tool
+
+This is a tool to try to track my next React learning goal.
+![React learning tracking tool by Daniel Pescador](https://github.com/[thremulant]/[react-knowledge-checker]/blob/[main]/screenshot.png?raw=true)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
