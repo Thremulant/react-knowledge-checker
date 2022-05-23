@@ -1,4 +1,4 @@
-# React learning tracking tool
+# React knowledge checker tool
 
 This is a tool to try to track my next React learning goal.
 
