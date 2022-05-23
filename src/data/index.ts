@@ -26,5 +26,5 @@ export const topicsCollection: IOption[] = [
   { name: "Server-side rendering", score: 3, enabled: false, desc: 'Creating your app with this configuration' },
   { name: "Rewiring React", score: 3, enabled: false, desc: 'Rewiring without breaking CRA' },
   { name: "Frameworks like NextJS or Gatsby", score: 2, enabled: false, desc: 'You will try it some day!' },
-  { name: "Creating your own component\'s library ", score: 3, enabled: false, desc: 'Using Storybook to create and maintain a package that you can install in other projects' },
+  { name: "Creating your own component's library ", score: 3, enabled: false, desc: 'Using Storybook to create and maintain a package that you can install in other projects' },
 ];
