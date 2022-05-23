@@ -1,6 +1,6 @@
 import { useFormikContext } from "formik";
-import { motion, MotionValue, useSpring, useTransform } from "framer-motion";
-import { ReactElement, useEffect, useState } from "react";
+import { motion, useSpring, useTransform } from "framer-motion";
+import { useEffect, useState } from "react";
 import { useReward } from "react-rewards";
 import { ITopics } from "../models";
 
@@ -63,7 +63,7 @@ export const ReactLevel = () => {
             <Level current={total} text="Intermediate" msg="Epic!" points={INTER} />
             <Level current={total} text="Advanced" msg={`Congratulations!\nyou're the king of the React nerds!`} points={ADVAN} />
           </div>
-          <div className="w-100 top-8 flex flex-row justify-center mx-auto text-white pl-6 md:pl-32 py-6">
+          <div className="w-100 top-8 flex flex-row justify-center mx-auto text-white py-6">
             <div onClick={handleClear} className='transition duration-300 ease-in-out cursor-pointer px-4 py-2 border-[1px] hover:border-0 border-solid border-zinc-200 hover:bg-gradient-to-br from-yellow-500 hover:font-bold to-orange-500 drop-shadow-xl rounded-lg'>
               Clear
             </div>
