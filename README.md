@@ -1,3 +1,5 @@
+[![Node.js CI](https://github.com/Thremulant/react-knowledge-checker/actions/workflows/hostingerFTP.yml/badge.svg)](https://github.com/Thremulant/react-knowledge-checker/actions/workflows/hostingerFTP.yml)
+
 # React knowledge checker tool
 
 This is a tool to try to track my next React learning goal.
