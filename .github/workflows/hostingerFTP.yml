@@ -27,7 +27,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
-    - run: npm run build --if-present
+    - run: npm run build-CI --if-present
 
     - name: Deploy by FTP
       uses: airvzxf/ftp-deployment-action@latest
@@ -35,6 +35,6 @@ jobs:
         server: ${{ secrets.FTP_HOST }}
         user: ${{ secrets.FTP_USER }}
         password: ${{ secrets.FTP_PSSW }}
-        local_dir: "./out"
+        local_dir: "./build"
         delete: "true"
         max_retries: 2
