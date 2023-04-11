@@ -27,6 +27,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+    - run: npm install -g npm@7.x.x
     - run: npm ci
     - run: npm run build-CI --if-present
 
